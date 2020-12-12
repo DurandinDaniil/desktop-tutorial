@@ -1,0 +1,61 @@
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1rem;
+
+	color:#333;
+	background-color: lighten(#EEEDED, 2.5%);
+
+}
+
+.container{
+    
+    margin: auto;
+    padding: 10px;
+}
+
+.pb-cmnt-container {
+    margin: auto;
+    font-family: Lato;
+    margin-top: 100px;
+}
+
+.pb-cmnt-textarea {
+    margin: auto;
+    resize: none;
+    height: 130px;
+    width: 100%;
+    border: 1px solid #f2f2f2;
+}
+
+.form-inline{
+    margin: auto;
+    width: 30%;
+}
+
+.button{
+    margin-left: 100%;
+}
+
+.review_section{
+    display: inline-block;
+    width: 65%;
+	height: 100%;
+
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.review{
+    display: inline-block;
+    vertical-align: middle;
+
+    width: calc(100% - 75px);
+    min-height: 65px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: .9rem;
+    color: #555;
+    background-color: #FFF;
+    border-bottom: 2px solid grey;
+}

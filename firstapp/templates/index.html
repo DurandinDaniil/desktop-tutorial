@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Модели в Django</title>
+    <!-- {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+<style>
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1rem;
+
+	color:#333;
+	background-color:rgb(202, 202, 202);
+
+}
+
+.container{
+    margin: auto;
+}
+
+.pb-cmnt-container {
+    margin: auto;
+    font-family: Lato;
+    margin-top: 100px;
+}
+
+.pb-cmnt-textarea {
+    resize: none;
+    height: 130px;
+    width: 100%;
+    border: 1px solid #f2f2f2;
+}
+
+
+.panel-body{
+    width: 65%;
+	height: 100%;
+
+	margin: 0 auto;
+	padding: 10px;
+}
+.form-inline{
+    width: 100%;
+    
+	margin:auto;
+    min-height: 65px;
+}
+
+.button{
+    margin-left: 100%;
+}
+
+.review_section{
+    width: 65%;
+	height: 100%;
+
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.review{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+    width: calc(100% - 75px);
+    min-height: 65px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: .9rem;
+    color: #555;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid grey;
+}
+
+
+</style>
+
+
+</head>
+<body class="container">
+<!--     <form method="POST" action="create/">
+        {% csrf_token %}
+        <table>
+         {{userform}}   
+        </table>
+        
+        <p>
+            <label>Wtite Your review</label><br>
+            <input type="text" name="text" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form> -->
+
+
+    <div class="pb-cmnt-container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                            <form method="POST" action="create/" class = "form-inline">
+                                    {% csrf_token %}
+
+                                    {{userform}}
+                                    <!-- <table>
+                                        {{userform}}   
+                                    </table> -->
+                            <input type="submit" value="Сохранить" class = 'button'>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if review.count > 0 %}
+
+<div class = 'review_section'> 
+    <h2>Reviews</h2>
+    {% for rews in review %}
+
+    <div class = 'review' 
+    {% if rews.length %} style='background-color:#9ae790' {% endif %}
+    {% else % } style='background-color:#d38e97' 
+     >
+
+        <p> {{rews.text}} </p>
+        <p> {{rews.length}}</p>
+
+    </div>
+
+    {% endfor %}
+<!-- 
+    <ul>
+
+        {% for rews in review %}
+        <li>
+        <p>{{rews.text}}</p>
+        <p> {{rews.length}}</p>
+        </li>
+        {% endfor %}
+
+    </ul> -->
+
+</div>
+    {% endif %}
+
+</body>
+</html>
+
