@@ -17,8 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from firstapp import views
 
+from django.conf import settings
+from django.conf.urls.static import static  
+
  
 urlpatterns = [
     path('', views.index),
     path('create/', views.create),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# urlpatterns += patterns(", (r^static/(?P.*)$, ‘django.views.static.serve, {‘document_root: settings.STATIC_ROOT}),)

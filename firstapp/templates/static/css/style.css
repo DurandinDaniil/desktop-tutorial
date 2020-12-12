@@ -4,14 +4,12 @@ body {
 	font-size: 1rem;
 
 	color:#333;
-	background-color:red;
+	background-color:rgb(202, 202, 202);
 
 }
 
 .container{
-    background-color:red;
     margin: auto;
-    padding: 10px;
 }
 
 .pb-cmnt-container {
@@ -21,16 +19,25 @@ body {
 }
 
 .pb-cmnt-textarea {
-    margin: auto;
     resize: none;
     height: 130px;
     width: 100%;
     border: 1px solid #f2f2f2;
 }
 
+
+.panel-body{
+    width: 65%;
+	height: 100%;
+
+	margin: 0 auto;
+	padding: 10px;
+}
 .form-inline{
-    margin: auto;
-    width: 30%;
+    width: 100%;
+    
+	margin:auto;
+    min-height: 65px;
 }
 
 .button{
@@ -38,7 +45,6 @@ body {
 }
 
 .review_section{
-    display: inline-block;
     width: 65%;
 	height: 100%;
 
@@ -49,7 +55,7 @@ body {
 .review{
     display: inline-block;
     vertical-align: middle;
-
+    margin: 10px;
     width: calc(100% - 75px);
     min-height: 65px;
     margin-left: 10px;
