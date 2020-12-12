@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
@@ -34,3 +35,26 @@ vs2015_runtime=14.27.29016=h5e58377_2
 wheel=0.36.1=pyhd3eb1b0_0
 wincertstore=0.2=py38_0
 zlib=1.2.11=h62dcd97_4
+=======
+asgiref==3.3.1
+certifi==2020.12.5
+click==7.1.2
+Django==3.1.4
+joblib==0.17.0
+nltk==3.5
+numpy==1.19.3
+pandas==1.1.5
+psycopg2==2.8.5
+python-dateutil==2.8.1
+pytz==2020.4
+regex==2020.11.13
+scikit-learn==0.23.2
+scipy==1.5.4
+six==1.15.0
+sklearn==0.0
+sqlparse==0.4.1
+threadpoolctl==2.1.0
+tqdm==4.54.1
+wincertstore==0.2
+
+>>>>>>> a5f3ca33f8f2f7b91ca1ea3f328e34a66fe4c8fd
